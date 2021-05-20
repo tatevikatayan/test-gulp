@@ -1,0 +1,99 @@
+@import "_reset";
+@import "fonts";
+@import "slick";
+@import "slider";
+@import "cards";
+@import "info";
+@import "footer";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+    }
+    html {
+        box-sizing: border-box;
+        font-size: 16px;
+        margin: 0;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+    body {
+        font-family: "Roboto", sans-serif;
+        background-color: #e5e5e5;
+        color: #4a4a4a;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    input,
+    button,
+    textarea{
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+    }
+    input{
+        font-weight: 400;
+    }
+    input::placeholder,
+    textarea::placeholder{
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    button{
+        font-weight: 500;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    ul {
+        list-style: none;
+    }
+    img {
+        width: 100%;
+        background-size: cover;
+        display: block;
+    }
+    .container {
+        max-width: 1024px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .header__nav {
+        padding: 60px 0 24px;
+        ul {
+            display: flex;
+            align-items: center;
+            color: #808080;
+            cursor: pointer;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        .arrow {
+            margin-right: 9px;
+            margin-left: 9px;
+            height: 10px;
+            width: 5px;
+            display: block;
+            background: url('../images/Shape.svg') no-repeat bottom left;
+            background-size: cover;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            padding-top: 1.56rem;
+        }
+    }
